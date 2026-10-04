@@ -6,7 +6,7 @@ import org.educa.service.ProductoService;
 
 import java.util.List;
 
-public class Activity1 {
+public class Activity2Main {
     private static final String FILE_XML = "src/main/resources/xml/inventario_junio2026.xml";
 
     public static void main(String[] args) {

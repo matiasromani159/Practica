@@ -2,6 +2,11 @@ package org.educa.entity;
 
 import java.math.BigDecimal;
 
+//sin revisar
+
+
+
+
 public class SummaryEntity {
     private String name;
     private int numberOfProducts;
