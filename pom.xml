@@ -73,6 +73,9 @@
                             <sources>
                                 <source>src/main/resources/xsd</source>
                             </sources>
+                            <!--  le dice a xjc en qué paquete crear las clases.
+                            Sin esto caen en el paquete "por defecto" y no se pueden importar -->
+                            <packageName>org.educa.generated</packageName>
                         </configuration>
                     </execution>
                 </executions>

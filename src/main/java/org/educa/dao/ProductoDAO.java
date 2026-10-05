@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface ProductoDAO
 {
-    //Le exigimos q sea lista para despues poder ordenar como va a salir
-    List<ProductoEntity> readFile() throws JAXBException;;
+    //Le exigimos q sea lista para d espues poder ordenar como va a salir
+    List<ProductoEntity> readFile() throws JAXBException;
 
     //aqui mostramos con la lista q sacamos en el read
     void writeFile(List<ProductoEntity> productos);

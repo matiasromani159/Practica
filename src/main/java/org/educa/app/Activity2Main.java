@@ -16,7 +16,7 @@ public class Activity2Main {
             List<ProductoEntity> vehiculos = productoService.readFile(FILE_XML);
             for (ProductoEntity vehiculo : vehiculos) {
                 //Pintar por consola
-                System.out.println(vehiculo.toPrint());
+                //System.out.println(vehiculo.toPrint());
             }
         } catch (JAXBException e) {
             throw new RuntimeException(e);

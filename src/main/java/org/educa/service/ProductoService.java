@@ -1,6 +1,8 @@
 package org.educa.service;
 
 import jakarta.xml.bind.JAXBException;
+import org.educa.dao.ProductoDAO;
+import org.educa.dao.ProductoDAOImpl;
 import org.educa.entity.ProductoEntity;
 
 import java.io.IOException;
@@ -15,17 +17,14 @@ import java.util.List;
 
 public class ProductoService {
 
-    public List<ProductoEntity> readFile(String fileXml) throws JAXBException {
-        //TODOImplementar
-        return null;
+    public List<ProductoEntity> readFile(String fileXml) throws JAXBException
+    {
+        ProductoDAO dao = new ProductoDAOImpl(fileXml);
+        return dao.readFile();
     }
-
-    public void exportSummary(String path, String fileXml) throws JAXBException, IOException {
-        //TODOImplementar
-
-    }
-
-    public void exportExcel(String path, String fileXml) throws JAXBException, IOException, ParseException {
-        //TODOImplementar
+    public void writeFile(List<ProductoEntity> productos, String fileXml)
+    {
+        ProductoDAO dao = new ProductoDAOImpl(fileXml);
+        dao.writeFile(productos);
     }
 }
