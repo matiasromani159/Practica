@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c01aac34-093b-4d23-9ba1-8d0c9ca04253" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/educa/dao/ProductoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/educa/dao/ProductoDAOImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="ejercicio1" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2nTwQ8UsVoiXUuINqhLd9RQeOCL" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Activity1Main.executor": "Run",
+    "Maven.ad-ec-ra1-practica-apellidos-nombre [clean...].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "ejercicio1",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/usuario/IdeaProjects/ad-ec-ra1-practica-romani-matias-casas-marcos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "sonarlint",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.educa.dao" />
+      <recent name="org.educa.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Trabajo\Docencia\AD\ra1\ad-ec-ra1-practica-apellidos-nombre\src\main\resources\xsd" />
+      <recent name="C:\Desarrollo\Docencia\Workspace\AD\2025-26\RA1\Practica\ad-ec-ra1-practica-apellidos-nombre\src\main\resources\xsd" />
+      <recent name="C:\Desarrollo\Docencia\Workspace\AD\2024-25\UT1\ad-ut1-practica\src\main\java\org\educa" />
+      <recent name="C:\Desarrollo\Docencia\Workspace\AD\2024-25\UT1\ad-ut1-practica\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Trabajo\Docencia\AD\ra1\ad-ec-ra1-practica-apellidos-nombre\src\main\resources\xml" />
+      <recent name="C:\Desarrollo\Docencia\Workspace\AD\2025-26\RA1\Practica\ad-ec-ra1-practica-apellidos-nombre\src\main\resources\xml" />
+      <recent name="C:\Desarrollo\Docencia\Workspace\AD\2024-25\UT1\ad-ut1-practica\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.educa.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Activity1Main">
+    <configuration name="Activity1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.educa.app.Activity1" />
+      <module name="ad-ec-ra1-practica-romani-matias-casas-marcos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.educa.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Activity1Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.educa.app.Activity1Main" />
+      <module name="ad-ec-ra1-practica-romani-matias-casas-marcos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.educa.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Activity2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.educa.app.Activity2" />
+      <module name="ad-ec-ra1-practica-romani-matias-casas-marcos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.educa.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Activity3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.educa.app.Activity3" />
+      <module name="ad-ec-ra1-practica-romani-matias-casas-marcos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.educa.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Activity1Main" />
+        <item itemvalue="Application.Activity3" />
+        <item itemvalue="Application.Activity2" />
+        <item itemvalue="Application.Activity1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c01aac34-093b-4d23-9ba1-8d0c9ca04253" name="Changes" comment="" />
+      <created>1729010355238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729010355238</updated>
+      <workItem from="1729010356329" duration="5625000" />
+      <workItem from="1729073444120" duration="7574000" />
+      <workItem from="1729152045699" duration="5944000" />
+      <workItem from="1729162549124" duration="790000" />
+      <workItem from="1729175814826" duration="1989000" />
+      <workItem from="1729270532600" duration="3858000" />
+      <workItem from="1729322122986" duration="8177000" />
+      <workItem from="1729363129476" duration="1944000" />
+      <workItem from="1729410832821" duration="2101000" />
+      <workItem from="1729509196266" duration="3859000" />
+      <workItem from="1729524964681" duration="5683000" />
+      <workItem from="1731092286601" duration="2149000" />
+      <workItem from="1741273153326" duration="615000" />
+      <workItem from="1758645456163" duration="3471000" />
+      <workItem from="1758648988850" duration="284000" />
+      <workItem from="1758649344676" duration="51000" />
+      <workItem from="1759050592585" duration="58000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

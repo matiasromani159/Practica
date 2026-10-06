@@ -1,0 +1,6 @@
+Fecha: inventario_junio2026
+NumeroDeProductos: 5
+BeneficioTotal: 1223.73
+Ruta del fichero: C:\Users\usuario\IdeaProjects\ad-ec-ra1-practica-romani-matias-casas-marcos\src\main\resources\xml\inventario_junio2026.xml
+Nombre del fichero: inventario_junio2026
+Tamaño del fichero: 3797 bytes
