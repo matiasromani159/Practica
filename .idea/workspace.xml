@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c01aac34-093b-4d23-9ba1-8d0c9ca04253" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/educa/dao/ProductoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/educa/dao/ProductoDAOImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="c01aac34-093b-4d23-9ba1-8d0c9ca04253" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +58,7 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "ejercicio1",
+    "git-widget-placeholder": "ejercicio2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/usuario/IdeaProjects/ad-ec-ra1-practica-romani-matias-casas-marcos",

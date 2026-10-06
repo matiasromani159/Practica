@@ -126,8 +126,10 @@ public class ProductoDAOImpl implements ProductoDAO
             System.out.println("Precio final: "+ precioFinal);
             System.out.println("Coste: "+ coste);
             System.out.println("Beneficio: "+ beneficio);
-            try {
 
+
+            try {
+                //Escritura del txt
                 File fichero = new File(ruta);
 
                 String nombre = fichero.getName();
