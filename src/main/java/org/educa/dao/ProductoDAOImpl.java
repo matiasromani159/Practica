@@ -16,7 +16,10 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.FileOutputStream;
 public class ProductoDAOImpl implements ProductoDAO
 {
     //creamos constructor y añadimos parametro de ruta para pasarselo al read
@@ -123,6 +126,102 @@ public class ProductoDAOImpl implements ProductoDAO
             System.out.println("Precio final: "+ precioFinal);
             System.out.println("Coste: "+ coste);
             System.out.println("Beneficio: "+ beneficio);
+        }
+
+        // INICIO DEL EXCEL
+        Workbook workbook = new XSSFWorkbook();
+        Sheet sheet = workbook.createSheet("Productos");
+
+        // Cabecera
+        Row header = sheet.createRow(0);
+
+        String[] columnas = {
+                "Codigo", "Número de Serie", "Marca", "Modelo",
+                "Categoria", "Precio", "Descuento", "Precio Final",
+                "Coste", "Beneficio"
+        };
+
+// Estilo cabecera
+        CellStyle estiloCabecera = workbook.createCellStyle();
+        Font fuente = workbook.createFont();
+        fuente.setBold(true);
+        estiloCabecera.setFont(fuente);
+        estiloCabecera.setAlignment(HorizontalAlignment.CENTER);
+
+// Estilos filas
+        CellStyle estiloFila1 = workbook.createCellStyle();
+        estiloFila1.setAlignment(HorizontalAlignment.CENTER);
+        estiloFila1.setFillForegroundColor(IndexedColors.LIGHT_ORANGE.getIndex());
+        estiloFila1.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+        CellStyle estiloFila2 = workbook.createCellStyle();
+        estiloFila2.setAlignment(HorizontalAlignment.CENTER);
+        estiloFila2.setFillForegroundColor(IndexedColors.WHITE.getIndex());
+        estiloFila2.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+// Crear cabecera
+        for (int i = 0; i < columnas.length; i++) {
+            Cell cell = header.createCell(i);
+            cell.setCellValue(columnas[i]);
+            cell.setCellStyle(estiloCabecera);
+        }
+
+// Datos
+        int fila = 1;
+
+        for (ProductoEntity p : productos) {
+
+            BigDecimal descuentoEuros = p.getPrecio().multiply(p.getDescuento())
+                    .divide(new BigDecimal("100"));
+
+            BigDecimal precioFinal = p.getPrecio().subtract(descuentoEuros)
+                    .setScale(2, RoundingMode.HALF_UP);
+
+            BigDecimal coste = p.getCostes().getCostesAlmacenaje()
+                    .add(p.getCostes().getCostesEnvio());
+
+            BigDecimal beneficio = precioFinal.subtract(coste);
+
+            Row row = sheet.createRow(fila);
+
+            CellStyle estilo = (fila % 2 == 1) ? estiloFila1 : estiloFila2;
+
+            row.createCell(0).setCellValue(p.getCodigo());
+            row.createCell(1).setCellValue(p.getNumeroSerie());
+            row.createCell(2).setCellValue(p.getMarca());
+            row.createCell(3).setCellValue(p.getModelo());
+            row.createCell(4).setCellValue(p.getCategoria());
+            row.createCell(5).setCellValue(p.getPrecio().doubleValue());
+            row.createCell(6).setCellValue(p.getDescuento().doubleValue());
+            row.createCell(7).setCellValue(precioFinal.doubleValue());
+            row.createCell(8).setCellValue(coste.doubleValue());
+            row.createCell(9).setCellValue(beneficio.doubleValue());
+
+            // Aplicar estilo a toda la fila
+            for (Cell cell : row) {
+                cell.setCellStyle(estilo);
+            }
+
+            fila++;
+        }
+
+        // Guardar Excel
+        File carpeta = new File("src/main/resources/export");
+        carpeta.mkdirs();
+
+        File fichero = new File(ruta);
+        String nombre = fichero.getName();
+        String fecha = nombre.substring(11, nombre.length() - 4);
+
+        File salida = new File(carpeta, "export_" + fecha + ".xlsx");
+
+        try {
+            FileOutputStream out = new FileOutputStream(salida);
+            workbook.write(out);
+            out.close();
+            workbook.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
