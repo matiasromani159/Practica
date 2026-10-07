@@ -10,6 +10,8 @@ import org.educa.entity.ProductoEntity;
 import org.educa.entity.ProveedorEntity;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -121,7 +123,38 @@ public class ProductoDAOImpl implements ProductoDAO
             System.out.println("Precio final: "+ precioFinal);
             System.out.println("Coste: "+ coste);
             System.out.println("Beneficio: "+ beneficio);
+        }
+    }
 
+    @Override
+    public void exportSummary(List<ProductoEntity> productos, String path) throws IOException {
+        File fichero = new File(ruta);          // el XML de entrada
+        String nombre = fichero.getName();      // inventario_junio2026.xml
+
+        // Fecha: nos quedamos con lo que hay entre "inventario_" y ".xml"
+        // "inventario_" tiene 11 letras, y ".xml" son las 4 últimas
+        String fecha = nombre.substring(11, nombre.length() - 4);   // junio2026
+
+        // Sumamos el beneficio de cada producto
+        BigDecimal beneficioTotal = new BigDecimal("0");
+        for (ProductoEntity p : productos) {
+            BigDecimal descuento = p.getPrecio().multiply(p.getDescuento()).divide(new BigDecimal("100"));
+            BigDecimal precioFinal = p.getPrecio().subtract(descuento);
+            BigDecimal coste = p.getCostes().getCostesAlmacenaje().add(p.getCostes().getCostesEnvio());
+            BigDecimal beneficio = precioFinal.subtract(coste);
+
+            beneficioTotal = beneficioTotal.add(beneficio);
+        }
+
+        // Escribimos el txt (la carpeta export debe existir ya)
+        File salida = new File(path + "result_" + fecha + ".txt");
+        try (FileWriter writer = new FileWriter(salida)) {
+            writer.write("Fecha: " + fecha + "\n");
+            writer.write("NumeroDeProductos: " + productos.size() + "\n");
+            writer.write("BeneficioTotal: " + beneficioTotal + "\n");
+            writer.write("Ruta del fichero: " + fichero.getAbsolutePath() + "\n");
+            writer.write("Nombre del fichero: " + nombre + "\n");
+            writer.write("Tamaño del fichero: " + fichero.length() + " bytes\n");
         }
     }
 }

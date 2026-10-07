@@ -5,6 +5,7 @@ import org.educa.entity.CostesEntity;
 import org.educa.entity.ProductoEntity;
 import org.educa.entity.ProveedorEntity;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface ProductoDAO
 
     //aqui mostramos con la lista q sacamos en el read
     void writeFile(List<ProductoEntity> productos);
+
+    void exportSummary(List<ProductoEntity> productos, String path) throws IOException;
 }
