@@ -27,4 +27,10 @@ public class ProductoService {
         ProductoDAO dao = new ProductoDAOImpl(fileXml);
         dao.writeFile(productos);
     }
+    public void exportSummary(String path, String fileXml) throws JAXBException, IOException {
+        ProductoDAO dao = new ProductoDAOImpl(fileXml);
+        List<ProductoEntity> productos = dao.readFile();
+        dao.exportSummary(productos, path);
+    }
+
 }
