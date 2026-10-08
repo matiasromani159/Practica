@@ -17,6 +17,16 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Implementación de ProductoDAO.
+ * ProductoDAOImpl trabaja con la información de los productos obtenida
+ *desde el fichero XML y realiza las operaciones necesarias sobre ella.
+ *
+ * @author Marcos Casas
+ * @author Matías Romani
+ * @version 1.0
+ * @since 05/10/2026
+ */
 public class ProductoDAOImpl implements ProductoDAO
 {
     //creamos constructor y añadimos parametro de ruta para pasarselo al read
@@ -87,7 +97,7 @@ public class ProductoDAOImpl implements ProductoDAO
         }
         return lista;
         //List of es una lista inmutable, no deja .add()
-        //return List.of();
+
     }
 
     public void writeFile(List<ProductoEntity> productos)
@@ -128,11 +138,11 @@ public class ProductoDAOImpl implements ProductoDAO
 
     @Override
     public void exportSummary(List<ProductoEntity> productos, String path) throws IOException {
-        File fichero = new File(ruta);          // el XML de entrada
-        String nombre = fichero.getName();      // inventario_junio2026.xml
+        File fichero = new File(ruta);
+        String nombre = fichero.getName();// inventario_junio2026.xml
 
-        // Fecha: nos quedamos con lo que hay entre "inventario_" y ".xml"
-        // "inventario_" tiene 11 letras, y ".xml" son las 4 últimas
+        //Fecha: nos quedamos con lo q hay entre "inventario_" y ".xml"
+        //"inventario_" tiene 11 letras, y ".xml" son las 4 últimas
         String fecha = nombre.substring(11, nombre.length() - 4);   // junio2026
 
         // Sumamos el beneficio de cada producto
@@ -146,7 +156,7 @@ public class ProductoDAOImpl implements ProductoDAO
             beneficioTotal = beneficioTotal.add(beneficio);
         }
 
-        // Escribimos el txt (la carpeta export debe existir ya)
+        //Escribimos el txt (la carpeta export debe existir ya)
         File salida = new File(path + "result_" + fecha + ".txt");
         try (FileWriter writer = new FileWriter(salida)) {
             writer.write("Fecha: " + fecha + "\n");
