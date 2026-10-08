@@ -1,5 +1,14 @@
 package org.educa.entity;
 
+/**
+ * Entidad Proveedor.Representa los datos del proveedor de un producto,
+ * anidada dentro de ProductoEntity.
+ *
+ * @author Marcos Casas
+ * @author Matías Romani
+ * @version 1.0
+ * @since 05/10/2026
+ */
 public class ProveedorEntity
 {
     //aqui pasaremos los de proveedor q metistetodo junto en producto

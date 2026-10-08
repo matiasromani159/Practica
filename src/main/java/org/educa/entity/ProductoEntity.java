@@ -1,9 +1,17 @@
 package org.educa.entity;
 
-import java.io.File;
-import java.math.BigDecimal;
-//Esto estaba MAL, si miras en el xml las entity deben separarse por las clases del xml q son Producto / Proveedor /Costes (cada una contiene cosas extras)
 
+import java.math.BigDecimal;
+
+/**
+ * Entidad Producto. Representa un producto del inventario con sus datos
+ * básicos, proveedor y costes asociados.
+ *
+ * @author Marcos Casas
+ * @author Matías Romani
+ * @version 1.0
+ * @since 05/10/2026
+ */
 public class ProductoEntity
 {
     private String codigo;
